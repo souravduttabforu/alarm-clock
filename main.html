@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Alarm Clock</title>
+  </head>
+  <body>
+    <div id="full-body-container">
+      <div id="mid-body-container">
+        <div id="main-container">
+          <!-- live thime show in this h1 div -->
+          <h1 id="live-time"></h1>
+          <div>
+            <!-- user will input data in these divs -->
+            <div id="input-container">
+              <input
+                id="input-hour"
+                type="number"
+                min="1"
+                max="12"
+                placeholder="hour"
+                required
+                class="inputs"
+              />
+
+              <input
+                id="input-minute"
+                type="number"
+                min="0"
+                max="60"
+                placeholder="minute"
+                required
+                class="inputs"
+              />
+
+              <input
+                id="input-second"
+                type="number"
+                min="0"
+                max="60"
+                placeholder="second"
+                required
+                class="inputs"
+              />
+
+              <select name="" id="am-pm-selector">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+            </div>
+            <div id="set-alarm">
+              <button type="submit" id="set-alarm-button">Set Alarm</button>
+            </div>
+          </div>
+          <!-- this div will contain all the alarm list -->
+          <div id="alarm-list-container"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
